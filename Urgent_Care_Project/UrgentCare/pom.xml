@@ -62,13 +62,8 @@
 		     <version>1.22.0</version>
   		 </dependency>	
   		 
-  	<!-- Spring JDBC dependency added by Shubhangi Shimpi --> 
-  		<dependency>
-   			<groupId>org.springframework</groupId>
-    		<artifactId>spring-jdbc</artifactId>
-    		<version>5.0.0.M4</version>
-		</dependency>	
-    
+  	
+  	
     <!-- MySQL Connector dependency added by Shubhangi Shimpi -->
    	 	<dependency>
     		<groupId>mysql</groupId>
