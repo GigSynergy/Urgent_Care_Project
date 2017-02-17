@@ -13,15 +13,18 @@ public class App{
 			Statement myStat = myConn.createStatement();
 			// 3. Create a ResultSet
 			
-			myStat.executeUpdate("INSERT INTO tblpatient(`Patient_ID`, `Patient_Phone`, `Patient_F_Name`, `Patient_M_Name`, `Patient_L_Name`, `Service_Date`, `Service_Time`, `Facility_ID`) "
-					+ "VALUES (10000, 12345678, 'Shubhangi', 'V', 'Shimpi', 2017-02-02, 12:15:20, 1)");
+			System.out.println(myConn);
 			
-			ResultSet myRs = myStat.executeQuery("select * from tblpatient");
+		//myStat.executeUpdate("INSERT INTO tblfacility(`Facility_ID`, `Facility_Phone`, `Facility_Address`, `Facility_Rating`)"
+		//			+ "VALUES (2, 10101010,'Pomona' , 3)");
+		//myStat.executeUpdate("INSERT INTO tblpatient(`Patient_ID`, `Patient_Phone`, `Patient_F_Name`, `Patient_M_Name`, `Patient_L_Name`, `Service_Date`, `Service_Time`, `Facility_ID`)" 
+			//		+ "VALUES (1, 12345678, 'Tannaz', '', 'Rezaei', '0000-00-00', '00:00:00', 1)");	
+		ResultSet myRs = myStat.executeQuery("select * from tblfacility");
 			
 			
-			// Try to print the result 
+			 //Try to print the result 
 			while (myRs.next()){
-				System.out.println(myRs.getString("Patient_F_Name"));
+				System.out.println(myRs.getString("Facility_Address"));
 			}
 		}
 		catch (Exception exc){
